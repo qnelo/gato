@@ -19,7 +19,7 @@ class GamesQuerySet(models.QuerySet):
             Q(first_player=user) | Q(second_player=user)
         )
 
-    def active(self, user):
+    def active(self):
         return self.filter(
             Q(status='F') | Q(status='S')
         )
