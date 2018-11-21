@@ -7,7 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Aloha</h1>
-    loreasdfipsum
+    <h1>Aloha {{ user.username }}</h1>
+    Estos son tus juegos activos
+
+    <ul>
+        {% for g in games %}
+        <li>Juego {{ g.id }}: {{ g.first_player }} vs {{ g.second_player }}</li>
+        {% endfor %}
+    </ul>
 </body>
 </html>
