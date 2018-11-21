@@ -124,3 +124,9 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
+
+# redirect despues del login o logout
+LOGIN_REDIRECT_URL='player_home'
+LOGOUT_REDIRECT_URL='gato_welcome'
+
+LOGIN_URL='player_login'

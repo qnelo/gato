@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}
+Login
+{% endblock %}
+
+{% block content %}
+<form action="{% url 'player_login' %}" role="form" method="POST">
+    {% csrf_token %}
+    <p>Logeate poh</p>
+    {{ form }}
+    <button type="submit" class="btn btn-success">Aprietame</button>
+</form>
+{% endblock %}

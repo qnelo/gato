@@ -22,5 +22,5 @@ from .saludo import saludo
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^player/', include('player.urls')),
-    url(r'^$', saludo)
+    url(r'^$', saludo, name='gato_welcome')
 ]
